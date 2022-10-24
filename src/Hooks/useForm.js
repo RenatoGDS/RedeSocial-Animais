@@ -7,7 +7,6 @@ const types = {
     }
 }
 
-
 const useForm = (type) => {
     const [value, setValue] = React.useState('');
     const [error, setError] = React.useState(null);
@@ -20,7 +19,7 @@ const useForm = (type) => {
         }else if (types[type] && !types[type].regex.test(value)) {
             setError(types[type].message);
             return false;
-        }  else {
+        } else {
             setError(null);
             return true;
         } 
